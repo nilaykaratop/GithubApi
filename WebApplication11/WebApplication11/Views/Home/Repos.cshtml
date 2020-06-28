@@ -1,0 +1,41 @@
+﻿@model List<Repo>
+@{
+    ViewData["Title"] = "Repos";
+}
+
+<h2>Repos</h2>
+
+
+<div>
+
+    <div>
+        <table>
+            <tbody>
+                <tr style="color:rebeccapurple">
+                    <td><h3><b>Name</b></h3></td>
+                    <td><h3><b>Destcription</b></h3></td>
+                    <td><h3><b>Html url</b></h3></td>
+                    <td><h3><b>Homepage</b></h3></td>
+                    <td><h3><b>Watchers</b></h3></td>
+                    <td><h3><b>Pushed</b></h3></td>
+                </tr>
+            </tbody>
+            @foreach (var item in Model)
+            {
+                <theadh>
+                    <tr>
+                        <th >@item.Name</th>
+                        <th>@item.Description</th>
+                        <th>@item.GitHubHomeUrl</th>
+                        <th> @item.Homepage</th>
+                        <th>@item.Watchers</th>
+                        <th>@item.JsonDate</th>
+                    </tr>
+                </theadh>
+            }
+        </table>
+
+    </div>
+
+</div>
+
